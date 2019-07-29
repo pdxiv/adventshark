@@ -42,7 +42,7 @@ pipenv run python adventshark.py
 Linux/MacOSX `./build.sh`
 Windows: `build.cmd`
 
-## How to convert .DAT files to .json
+## How to convert .dat files to .json
 
 Since adventshark currently doesn't have file import functionality, old data files will first need to be converted to adventshark's `.json` format with an included Perl script: `scott2json.pl`.
 
@@ -69,5 +69,5 @@ This example assumes that the `rename` utility is installed. It will convert all
 - `Pipfile`: Pipenv data file
 - `Pipfile.lock`: Pipenv data file
 - `resources`: Directory containing tool button icons
-- `scott2json.pl`: Perl script for converting TRS-80 `.DAT` files into `.json`
+- `scott2json.pl`: Perl script for converting TRS-80 `.dat` files into `.json`
 - `.gitignore`: Which files or folders to ignore in the project
