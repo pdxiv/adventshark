@@ -1,6 +1,10 @@
 # adventshark
 
-GUI text adventure editor, compatible with Scott Adams/Adventure International
+## Introduction
+
+GUI text adventure editor, compatible with the Scott Adams/Adventure International game engine. It allows you to make text adventure games/interactive fiction that can be run with programs such as [ScottFree](https://www.ifarchive.org/indexes/if-archiveXscott-adamsXinterpretersXscottfree.html), [PerlScott](https://github.com/pdxiv/PerlScott) and others. 
+
+Please note, that adventshark can be used to produce data files that exceed limitations of specific interpreters.
 
 ## Requirements
 
