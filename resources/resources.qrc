@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>hires_remove.png</file>
+    <file>hires_move_up.png</file>
+    <file>hires_move_down.png</file>
+    <file>hires_insert_below.png</file>
+    <file>hires_insert_above.png</file>
+    <file>hires_sort.png</file>
+    <file>hires_adventshark_icon.png</file>
+  </qresource>
+</RCC>
