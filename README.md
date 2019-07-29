@@ -6,11 +6,11 @@ GUI text adventure editor, compatible with Scott Adams/Adventure International
 
 ### For Running
 
-Python 3.7 and Qt 5.
+Python 3.7, Pipenv and Qt 5.
 
 ### For building with Pyinstaller
 
-Python 3.7, Pipenv, Pyinstaller and Qt 5.
+Python 3.7, Pipenv, Qt 5 and Pyinstaller.
 
 ## How to run
 
