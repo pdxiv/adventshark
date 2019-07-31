@@ -6,10 +6,14 @@ def encode_data_to_dat(data):
     # Header
     # Byte size (no idea what it should be)
     output += format_number_output(0) + "\n"
-    output += format_number_output(data['header']['number_of_objects']) + "\n"
-    output += format_number_output(data['header']['number_of_actions']) + "\n"
-    output += format_number_output(data['header']['number_of_words']) + "\n"
-    output += format_number_output(data['header']['number_of_rooms']) + "\n"
+    output += format_number_output(len(data['object'])-1) + "\n"
+    output += format_number_output(len(data['action'])-1) + "\n"
+    if len(data['verb']) > len(data['noun']):
+        output += format_number_output(len(data['verb'])-1) + "\n"
+    else:
+        output += format_number_output(len(data['noun'])-1) + "\n"
+    output += format_number_output(len(data['room'])-1) + "\n"
+
     output += format_number_output(data['header']
                                    ['max_objects_carried']) + "\n"
     output += format_number_output(data['header']['starting_room']) + "\n"
@@ -17,7 +21,7 @@ def encode_data_to_dat(data):
                                    ['number_of_treasures']) + "\n"
     output += format_number_output(data['header']['word_length']) + "\n"
     output += format_number_output(data['header']['time_limit']) + "\n"
-    output += format_number_output(data['header']['number_of_messages']) + "\n"
+    output += format_number_output(len(data['message'])) + "\n"
     output += format_number_output(data['header']['treasure_room_id']) + "\n"
 
     # Actions
