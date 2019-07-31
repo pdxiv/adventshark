@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>adventshark v0.1.0</string>
+   <string>adventshark v0.1.1</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resources/resources.qrc">
