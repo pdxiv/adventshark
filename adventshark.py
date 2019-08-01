@@ -406,6 +406,8 @@ class ExampleApp(QtWidgets.QMainWindow):
             self.populate_room_comboboxes()
         elif item_type == 5:  # Object
             self.change_condition_code()  # Update all the text in condition comboboxes
+        # Attempt to manually repaint listwidget after update, to make it work on MacOSX
+        self.item_listwidget[item_type].repaint()
 
     # Action commands
     def change_command_message_combobox(self):
