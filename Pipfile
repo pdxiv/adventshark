@@ -9,6 +9,7 @@ verify_ssl = true
 pyqt5 = "*"
 pyinstaller = "*"
 pywin32-ctypes = "*"
+macholib = "*"
 
 [requires]
 python_version = "3.7"
