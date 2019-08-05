@@ -1,0 +1,177 @@
+{
+    "action": [],
+    "header": {
+        "adventure_number": 0,
+        "adventure_version": 0,
+        "game_bytes": 0,
+        "max_objects_carried": 99,
+        "number_of_actions": 0,
+        "number_of_messages": 0,
+        "number_of_objects": 0,
+        "number_of_rooms": 0,
+        "number_of_treasures": 0,
+        "number_of_words": 0,
+        "starting_room": 1,
+        "time_limit": 32767,
+        "treasure_room_id": 0,
+        "word_length": 3
+    },
+    "message": [],
+    "noun": [
+        "ANY",
+        "NORTH",
+        "SOUTH",
+        "EAST",
+        "WEST",
+        "UP",
+        "DOWN",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+    ],
+    "object": [
+        {
+            "description": "Pile of apples",
+            "noun": "APP",
+            "starting_location": 0
+        },
+        {
+            "description": "Ladder",
+            "noun": "",
+            "starting_location": 3
+        },
+        {
+            "description": "Ladder",
+            "noun": "LAD",
+            "starting_location": 0
+        },
+        {
+            "description": "Hungry goblin",
+            "noun": "",
+            "starting_location": 3
+        },
+        {
+            "description": "Sleeping goblin",
+            "noun": "",
+            "starting_location": 0
+        },
+        {
+            "description": "T-shirt",
+            "noun": "TSH",
+            "starting_location": 5
+        },
+        {
+            "description": "Tshirt (worn)",
+            "noun": "",
+            "starting_location": 0
+        },
+        {
+            "description": "Apple tree",
+            "noun": "",
+            "starting_location": 2
+        },
+        {
+            "description": "Abused tree",
+            "noun": "",
+            "starting_location": 0
+        }
+    ],
+    "room": [
+        {
+            "description": "",
+            "exit": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "description": "I'm outside the gates of the adventurers' guild.",
+            "exit": [
+                0,
+                0,
+                2,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "description": "I'm in a meadow.",
+            "exit": [
+                3,
+                0,
+                4,
+                1,
+                0,
+                0
+            ]
+        },
+        {
+            "description": "I'm in a damp cave.",
+            "exit": [
+                0,
+                2,
+                0,
+                0,
+                0,
+                0
+            ]
+        },
+        {
+            "description": "I'm in a forest. There is a tree house at the top of the tree canopies.",
+            "exit": [
+                0,
+                0,
+                0,
+                2,
+                0,
+                0
+            ]
+        },
+        {
+            "description": "I'm inside a tree house.",
+            "exit": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
+        }
+    ],
+    "verb": [
+        "AUT",
+        "GO",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "GET",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "DRO"
+    ]
+}
