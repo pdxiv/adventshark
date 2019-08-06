@@ -1,5 +1,87 @@
 {
-    "action": [],
+    "action": [
+        {
+            "command": [
+                "message_0",
+                "no_operation",
+                "no_operation",
+                "no_operation"
+            ],
+            "condition": [
+                "at",
+                "here",
+                "parameter",
+                "parameter",
+                "parameter"
+            ],
+            "condition_argument": [
+                3,
+                3,
+                0,
+                0,
+                0
+            ],
+            "precondition": [
+                10,
+                7
+            ],
+            "title": "GET LADDER FAIL"
+        },
+        {
+            "command": [
+                "message_1",
+                "no_operation",
+                "no_operation",
+                "no_operation"
+            ],
+            "condition": [
+                "at",
+                "here",
+                "parameter",
+                "parameter",
+                "parameter"
+            ],
+            "condition_argument": [
+                3,
+                3,
+                0,
+                0,
+                0
+            ],
+            "precondition": [
+                0,
+                50
+            ],
+            "title": "GOBLIN STOMACH GROWLING"
+        },
+        {
+            "command": [
+                "message_2",
+                "no_operation",
+                "no_operation",
+                "no_operation"
+            ],
+            "condition": [
+                "at",
+                "parameter",
+                "parameter",
+                "parameter",
+                "parameter"
+            ],
+            "condition_argument": [
+                4,
+                3,
+                0,
+                0,
+                0
+            ],
+            "precondition": [
+                19,
+                8
+            ],
+            "title": ""
+        }
+    ],
     "header": {
         "adventure_number": 0,
         "adventure_version": 0,
@@ -16,7 +98,11 @@
         "treasure_room_id": 0,
         "word_length": 3
     },
-    "message": [],
+    "message": [
+        "I start to reach for the ladder when the goblin starts to growl and bares its teeth. I can't remember if I had my tetanus shots recently so I'm backing off slowly.",
+        "The goblin's stomach is making growling noises.",
+        "Sign simply says:\n\"Treasures above\""
+    ],
     "noun": [
         "ANY",
         "NORTH",
@@ -25,11 +111,8 @@
         "WEST",
         "UP",
         "DOWN",
-        "",
-        "",
-        "",
-        "",
-        "",
+        "LAD",
+        "SIG",
         "",
         "",
         "",
@@ -83,6 +166,11 @@
             "description": "Abused tree",
             "noun": "",
             "starting_location": 0
+        },
+        {
+            "description": "Sign",
+            "noun": "",
+            "starting_location": 4
         }
     ],
     "room": [
@@ -98,7 +186,7 @@
             ]
         },
         {
-            "description": "I'm outside the gates of the adventurers' guild.",
+            "description": "I'm outside the gates of the adventurers' guild",
             "exit": [
                 0,
                 0,
@@ -109,7 +197,7 @@
             ]
         },
         {
-            "description": "I'm in a meadow.",
+            "description": "I'm in a meadow",
             "exit": [
                 3,
                 0,
@@ -120,7 +208,7 @@
             ]
         },
         {
-            "description": "I'm in a damp cave.",
+            "description": "I'm in a damp cave",
             "exit": [
                 0,
                 2,
@@ -131,7 +219,7 @@
             ]
         },
         {
-            "description": "I'm in a forest. There is a tree house at the top of the tree canopies.",
+            "description": "I'm in a forest. There is a tree house at the top of the tree canopies",
             "exit": [
                 0,
                 0,
@@ -142,7 +230,7 @@
             ]
         },
         {
-            "description": "I'm inside a tree house.",
+            "description": "I'm inside a tree house",
             "exit": [
                 0,
                 0,
@@ -172,6 +260,9 @@
         "",
         "",
         "",
-        "DRO"
+        "DRO",
+        "REA",
+        "*EXA",
+        "*X"
     ]
 }
