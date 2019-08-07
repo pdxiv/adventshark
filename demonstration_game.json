@@ -76,10 +76,280 @@
                 0
             ],
             "precondition": [
-                19,
+                21,
                 8
             ],
             "title": "READ SIGN IN FOREST"
+        },
+        {
+            "command": [
+                "goto",
+                "no_operation",
+                "no_operation",
+                "no_operation"
+            ],
+            "condition": [
+                "at",
+                "here",
+                "parameter",
+                "parameter",
+                "parameter"
+            ],
+            "condition_argument": [
+                4,
+                1,
+                5,
+                0,
+                0
+            ],
+            "precondition": [
+                24,
+                7
+            ],
+            "title": "CLIMB LADDER TO TREEHOUSE"
+        },
+        {
+            "command": [
+                "message_4",
+                "no_operation",
+                "no_operation",
+                "no_operation"
+            ],
+            "condition": [
+                "here",
+                "parameter",
+                "parameter",
+                "parameter",
+                "parameter"
+            ],
+            "condition_argument": [
+                6,
+                2,
+                5,
+                0,
+                0
+            ],
+            "precondition": [
+                19,
+                9
+            ],
+            "title": "EXAMINE TREE 1"
+        },
+        {
+            "command": [
+                "message_5",
+                "no_operation",
+                "no_operation",
+                "no_operation"
+            ],
+            "condition": [
+                "here",
+                "parameter",
+                "parameter",
+                "parameter",
+                "parameter"
+            ],
+            "condition_argument": [
+                7,
+                2,
+                5,
+                0,
+                0
+            ],
+            "precondition": [
+                19,
+                9
+            ],
+            "title": "EXAMINE TREE 2"
+        },
+        {
+            "command": [
+                "message_6",
+                "no_operation",
+                "no_operation",
+                "no_operation"
+            ],
+            "condition": [
+                "here",
+                "parameter",
+                "parameter",
+                "parameter",
+                "parameter"
+            ],
+            "condition_argument": [
+                2,
+                0,
+                0,
+                0,
+                0
+            ],
+            "precondition": [
+                19,
+                10
+            ],
+            "title": "EXAMINE GOBLIN 1"
+        },
+        {
+            "command": [
+                "message_7",
+                "no_operation",
+                "no_operation",
+                "no_operation"
+            ],
+            "condition": [
+                "here",
+                "parameter",
+                "parameter",
+                "parameter",
+                "parameter"
+            ],
+            "condition_argument": [
+                4,
+                6,
+                7,
+                0,
+                0
+            ],
+            "precondition": [
+                19,
+                10
+            ],
+            "title": "EXAMINE GOBLIN 2"
+        },
+        {
+            "command": [
+                "continue",
+                "no_operation",
+                "no_operation",
+                "no_operation"
+            ],
+            "condition": [
+                "at",
+                "here",
+                "here",
+                "parameter",
+                "parameter"
+            ],
+            "condition_argument": [
+                3,
+                3,
+                2,
+                2,
+                0
+            ],
+            "precondition": [
+                0,
+                100
+            ],
+            "title": "GOBLIN EAT APPLES"
+        },
+        {
+            "command": [
+                "message_8",
+                "swap",
+                "swap",
+                "destroy"
+            ],
+            "condition": [
+                "parameter",
+                "parameter",
+                "parameter",
+                "parameter",
+                "parameter"
+            ],
+            "condition_argument": [
+                4,
+                3,
+                0,
+                1,
+                2
+            ],
+            "precondition": [
+                0,
+                0
+            ],
+            "title": "GOBLIN EAT APPLES CONTINUED"
+        },
+        {
+            "command": [
+                "swap",
+                "drop",
+                "no_operation",
+                "no_operation"
+            ],
+            "condition": [
+                "here",
+                "parameter",
+                "parameter",
+                "parameter",
+                "parameter"
+            ],
+            "condition_argument": [
+                6,
+                6,
+                7,
+                2,
+                0
+            ],
+            "precondition": [
+                27,
+                9
+            ],
+            "title": "SHAKE TREE"
+        },
+        {
+            "command": [
+                "message_9",
+                "no_operation",
+                "no_operation",
+                "no_operation"
+            ],
+            "condition": [
+                "present",
+                "parameter",
+                "parameter",
+                "parameter",
+                "parameter"
+            ],
+            "condition_argument": [
+                5,
+                6,
+                7,
+                2,
+                2
+            ],
+            "precondition": [
+                19,
+                11
+            ],
+            "title": "EXAMINE T-SHIRT"
+        },
+        {
+            "command": [
+                "message_10",
+                "game_over",
+                "no_operation",
+                "no_operation"
+            ],
+            "condition": [
+                "present",
+                "parameter",
+                "parameter",
+                "parameter",
+                "parameter"
+            ],
+            "condition_argument": [
+                5,
+                6,
+                7,
+                2,
+                2
+            ],
+            "precondition": [
+                30,
+                11
+            ],
+            "title": "WEAR TSHIRT"
         }
     ],
     "header": {
@@ -100,8 +370,16 @@
     },
     "message": [
         "I start to reach for the ladder when the goblin starts to growl and bares its teeth. I can't remember if I had my tetanus shots recently so I'm backing off slowly.",
-        "The goblin's stomach is making growling noises.",
-        "Sign simply says:\n\"Treasures above\""
+        "I hear hungrily growling noises.",
+        "Sign simply says:\n\"Treasures above\"",
+        "I give the tree a thorough thrashing until all the apples on its branches have fallen to the ground.",
+        "It's an apple tree with its branches heavy with red and juicy-looking apples.",
+        "This tree looks like it has seen better days.",
+        "It's a dirty, sad looking little goblin.",
+        "It's a dirty little goblin, snoring loudly, with a smile on its face.",
+        "The goblin quickly throws itself at the apples, devouring every piece in sight, in a flurry of teeth, saliva and random bits of flying vegetable matter.\nEww! I think i got some in my hair!\nAfter the meal, the goblin blinks sleepily a couple of times and sinks down with a snore in the corner of the cave.",
+        "The tshirt has a print on it saying:\n\"Winners don't wear t-shirts. not.\"",
+        "As I start to put on the t-shirt the smell of mold and dust fills my nose.\nI'm going to need a long shower after this.\n\nAfter finding the treasure (well, treasure shirt) my mission is complete and I will no doubt proceed to live happily ever after, without putting on silly dirty garments for the sake of some stupid trial ever again."
     ],
     "noun": [
         "ANY",
@@ -113,6 +391,16 @@
         "DOWN",
         "LAD",
         "SIG",
+        "TRE",
+        "GOB",
+        "TSH",
+        "*SHI",
+        "*T-S",
+        "",
+        "",
+        "",
+        "",
+        "",
         "",
         "",
         "",
@@ -129,11 +417,6 @@
     ],
     "object": [
         {
-            "description": "Pile of apples",
-            "noun": "APP",
-            "starting_location": 0
-        },
-        {
             "description": "Ladder",
             "noun": "",
             "starting_location": 3
@@ -144,7 +427,12 @@
             "starting_location": 0
         },
         {
-            "description": "Hungry goblin",
+            "description": "Pile of apples",
+            "noun": "APP",
+            "starting_location": 0
+        },
+        {
+            "description": "Goblin",
             "noun": "",
             "starting_location": 3
         },
@@ -154,14 +442,9 @@
             "starting_location": 0
         },
         {
-            "description": "T-shirt",
+            "description": "Tshirt",
             "noun": "TSH",
             "starting_location": 5
-        },
-        {
-            "description": "Tshirt (worn)",
-            "noun": "",
-            "starting_location": 0
         },
         {
             "description": "Apple tree",
@@ -243,7 +526,7 @@
                 0,
                 0,
                 0,
-                0
+                4
             ]
         }
     ],
@@ -267,8 +550,18 @@
         "",
         "",
         "DRO",
+        "EXA",
+        "*X",
         "REA",
         "*EXA",
-        "*X"
+        "*X",
+        "CLIMB",
+        "*GO",
+        "*USE",
+        "SHA",
+        "*HIT",
+        "*KIC",
+        "WEA",
+        "*USE"
     ]
 }
