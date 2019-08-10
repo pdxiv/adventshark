@@ -350,6 +350,87 @@
                 11
             ],
             "title": "WEAR TSHIRT"
+        },
+        {
+            "command": [
+                "no_operation",
+                "no_operation",
+                "no_operation",
+                "no_operation"
+            ],
+            "condition": [
+                "parameter",
+                "parameter",
+                "parameter",
+                "parameter",
+                "parameter"
+            ],
+            "condition_argument": [
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "precondition": [
+                0,
+                0
+            ],
+            "title": "-------- GENERAL ACTIONS BELOW"
+        },
+        {
+            "command": [
+                "inventory",
+                "no_operation",
+                "no_operation",
+                "no_operation"
+            ],
+            "condition": [
+                "parameter",
+                "parameter",
+                "parameter",
+                "parameter",
+                "parameter"
+            ],
+            "condition_argument": [
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "precondition": [
+                32,
+                0
+            ],
+            "title": "INVENTORY"
+        },
+        {
+            "command": [
+                "look",
+                "no_operation",
+                "no_operation",
+                "no_operation"
+            ],
+            "condition": [
+                "parameter",
+                "parameter",
+                "parameter",
+                "parameter",
+                "parameter"
+            ],
+            "condition_argument": [
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "precondition": [
+                33,
+                0
+            ],
+            "title": "LOOK"
         }
     ],
     "header": {
@@ -562,6 +643,8 @@
         "*HIT",
         "*KIC",
         "WEA",
-        "*USE"
+        "*USE",
+        "INV",
+        "LOO"
     ]
 }
