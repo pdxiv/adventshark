@@ -84,7 +84,7 @@
         {
             "command": [
                 "goto",
-                "no_operation",
+                "look",
                 "no_operation",
                 "no_operation"
             ],
@@ -218,8 +218,8 @@
         },
         {
             "command": [
+                "message_8",
                 "continue",
-                "no_operation",
                 "no_operation",
                 "no_operation"
             ],
@@ -245,10 +245,10 @@
         },
         {
             "command": [
-                "message_8",
+                "destroy",
                 "swap",
                 "swap",
-                "destroy"
+                "look"
             ],
             "condition": [
                 "parameter",
@@ -258,11 +258,11 @@
                 "parameter"
             ],
             "condition_argument": [
-                4,
+                2,
                 3,
+                4,
                 0,
-                1,
-                2
+                1
             ],
             "precondition": [
                 0,
@@ -274,7 +274,7 @@
             "command": [
                 "swap",
                 "drop",
-                "no_operation",
+                "look",
                 "no_operation"
             ],
             "condition": [
