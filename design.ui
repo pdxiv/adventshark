@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1155</width>
-    <height>743</height>
+    <height>765</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -30,7 +30,7 @@
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_10">
@@ -203,7 +203,7 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <layout class="QVBoxLayout" name="verticalLayout_15">
         <item>
          <widget class="QGroupBox" name="groupBox_general">
@@ -336,7 +336,7 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <layout class="QVBoxLayout" name="verticalLayout_13">
         <item>
          <widget class="QGroupBox" name="groupBox_action">
@@ -601,10 +601,13 @@
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <layout class="QVBoxLayout" name="verticalLayout_8">
         <item>
          <widget class="QGroupBox" name="groupBox_room">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
           <property name="title">
            <string>Room Data</string>
           </property>
@@ -623,6 +626,9 @@
            </item>
            <item>
             <widget class="QGroupBox" name="groupBox_19">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="title">
               <string>Exits</string>
              </property>
@@ -694,24 +700,24 @@
              </layout>
             </widget>
            </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_message">
+          <property name="title">
+           <string>Message Data</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
            <item>
-            <widget class="QGroupBox" name="groupBox_message">
-             <property name="title">
-              <string>Message Data</string>
-             </property>
-             <layout class="QVBoxLayout" name="verticalLayout_6">
-              <item>
-               <widget class="QPlainTextEdit" name="plainTextEdit_message"/>
-              </item>
-             </layout>
-            </widget>
+            <widget class="QPlainTextEdit" name="plainTextEdit_message"/>
            </item>
           </layout>
          </widget>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="">
+      <widget class="QWidget" name="layoutWidget">
        <layout class="QVBoxLayout" name="verticalLayout_10">
         <item>
          <widget class="QGroupBox" name="groupBox_verb">
@@ -845,7 +851,7 @@
      <x>0</x>
      <y>0</y>
      <width>1155</width>
-     <height>22</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
