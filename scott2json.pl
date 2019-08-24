@@ -108,7 +108,6 @@ load_game_data_file();
 # Add general header data
 my %data_structure;
 %{ $data_structure{header} } = (
-    game_bytes          => int($game_bytes),
     max_objects_carried => int($max_objects_carried),
     starting_room       => int($starting_room),
     number_of_treasures => int($number_of_treasures),
