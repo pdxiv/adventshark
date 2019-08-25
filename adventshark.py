@@ -69,6 +69,8 @@ class ExampleApp(QtWidgets.QMainWindow):
                                          self.ui.comboBox_command_message_3, self.ui.comboBox_command_message_4]
         self.item_listwidget = [self.ui.listWidget_action, self.ui.listWidget_verb, self.ui.listWidget_noun,
                                 self.ui.listWidget_message, self.ui.listWidget_room, self.ui.listWidget_object]
+        self.item_groupbox = [self.ui.groupBox_action, self.ui.groupBox_verb, self.ui.groupBox_noun,
+                                self.ui.groupBox_message, self.ui.groupBox_room, self.ui.groupBox_object]
 
         self.header_spinbox = [self.ui.spinBox_max_objects_carried, self.ui.spinBox_treasures, self.ui.spinBox_word_length,
                                self.ui.spinBox_time_limit, self.ui.spinBox_version_number, self.ui.spinBox_adventure_number]
@@ -267,6 +269,7 @@ class ExampleApp(QtWidgets.QMainWindow):
         else:
             self.item_listwidget[tab_index].setCurrentRow(old_index)
         self.update_item_combobox_contents(tab_index)
+        self.disable_unused_groupboxes()
 
     def move_up(self):
         tab_index = self.ui.tabWidget.currentIndex()
@@ -332,6 +335,7 @@ class ExampleApp(QtWidgets.QMainWindow):
         self.populate_item_list[tab_index]()
         self.item_listwidget[tab_index].setCurrentRow(old_index + 1)
         self.update_item_combobox_contents(tab_index)
+        self.disable_unused_groupboxes()
 
     def add_above(self):
         tab_index = self.ui.tabWidget.currentIndex()
@@ -356,6 +360,7 @@ class ExampleApp(QtWidgets.QMainWindow):
             self.item_listwidget[tab_index].setCurrentRow(old_index)
             self.update_item_combobox_contents(tab_index)
             self.select_object()
+        self.disable_unused_groupboxes()
 
     # Dependency resolution working through recursion
     def decrement_terminal(self, data_structure, path):
@@ -1000,6 +1005,15 @@ class ExampleApp(QtWidgets.QMainWindow):
                 index, "%d: %s" % (index, text))
 
     # Generic
+    def disable_unused_groupboxes(self):
+        # Disable item groupboxes if number of items for that item type is 0
+        for current_item, list_item in enumerate(self.item_listwidget):
+            number_of_item = list_item.count()
+            if number_of_item == 0:
+                self.item_groupbox[current_item].setEnabled(False)
+            else:
+                  self.item_groupbox[current_item].setEnabled(True)
+
     def set_widget_bg_color(self, w, color):
         p = w.palette()
         p.setColor(w.backgroundRole(), color)
@@ -1030,6 +1044,7 @@ class ExampleApp(QtWidgets.QMainWindow):
         if hasattr(self, 'json_filename'):
             # Since we have a new file, disable the "Save" functionality
             delattr(self, 'json_filename')
+        self.disable_unused_groupboxes()
 
     def browse_open_json_file(self):
         # In case there are any existing elements in the list
@@ -1043,6 +1058,7 @@ class ExampleApp(QtWidgets.QMainWindow):
                 # Enable UI after we have data
                 self.ui.centralwidget.setEnabled(True)
                 self.json_filename = file_list[0]
+        self.disable_unused_groupboxes()
 
     def browse_save_as_json_file(self):
         if hasattr(self, 'data'):  # Only attempt export if data exists
