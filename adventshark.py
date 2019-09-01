@@ -70,7 +70,7 @@ class ExampleApp(QtWidgets.QMainWindow):
         self.item_listwidget = [self.ui.listWidget_action, self.ui.listWidget_verb, self.ui.listWidget_noun,
                                 self.ui.listWidget_message, self.ui.listWidget_room, self.ui.listWidget_object]
         self.item_groupbox = [self.ui.groupBox_action, self.ui.groupBox_verb, self.ui.groupBox_noun,
-                                self.ui.groupBox_message, self.ui.groupBox_room, self.ui.groupBox_object]
+                              self.ui.groupBox_message, self.ui.groupBox_room, self.ui.groupBox_object]
 
         self.header_spinbox = [self.ui.spinBox_max_objects_carried, self.ui.spinBox_treasures, self.ui.spinBox_word_length,
                                self.ui.spinBox_time_limit, self.ui.spinBox_version_number, self.ui.spinBox_adventure_number]
@@ -156,6 +156,8 @@ class ExampleApp(QtWidgets.QMainWindow):
             self.update_object_carriable)
         self.ui.comboBox_object_room.currentIndexChanged.connect(
             self.update_object_room)
+        self.ui.pushButton_create_noun_for_object.clicked.connect(
+            self.create_object_noun)
 
         # Actions
         self.ui.listWidget_action.itemSelectionChanged.connect(
@@ -735,6 +737,17 @@ class ExampleApp(QtWidgets.QMainWindow):
             self.ui.radioButton_precondition_subroutine.setChecked(True)
 
     # Objects
+    def create_object_noun(self):
+        object_noun_text = self.ui.lineEdit_object_noun.text().upper()
+        new_position = len(self.data['noun'])
+
+        # Only add noun to list if it doesn't already exist
+        if not object_noun_text in self.data['noun']:
+            # Add the object noun to the main noun list
+            self.ui.listWidget_noun.addItem(
+                "%d: %s" % (new_position, object_noun_text))
+            self.data['noun'].append(object_noun_text)
+
     def populate_object_list(self):
         self.ui.listWidget_object.clear()
         for index, value in enumerate(self.data['object']):
@@ -1012,7 +1025,7 @@ class ExampleApp(QtWidgets.QMainWindow):
             if number_of_item == 0:
                 self.item_groupbox[current_item].setEnabled(False)
             else:
-                  self.item_groupbox[current_item].setEnabled(True)
+                self.item_groupbox[current_item].setEnabled(True)
 
     def set_widget_bg_color(self, w, color):
         p = w.palette()
