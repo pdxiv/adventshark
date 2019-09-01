@@ -823,6 +823,9 @@
               </item>
               <item>
                <widget class="QPushButton" name="pushButton_create_noun_for_object">
+                <property name="toolTip">
+                 <string>Add object noun to noun list</string>
+                </property>
                 <property name="text">
                  <string>Create noun for object</string>
                 </property>
