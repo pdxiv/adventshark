@@ -738,15 +738,17 @@ class ExampleApp(QtWidgets.QMainWindow):
 
     # Objects
     def create_object_noun(self):
+        # Other than this, there should also be a function that disables the add noun button if the noun exists already, or if no object noun is specified
         object_noun_text = self.ui.lineEdit_object_noun.text().upper()
         new_position = len(self.data['noun'])
 
         # Only add noun to list if it doesn't already exist
         if not object_noun_text in self.data['noun']:
-            # Add the object noun to the main noun list
-            self.ui.listWidget_noun.addItem(
-                "%d: %s" % (new_position, object_noun_text))
-            self.data['noun'].append(object_noun_text)
+            if len(object_noun_text) > 0:
+                # Add the object noun to the main noun list
+                self.ui.listWidget_noun.addItem(
+                    "%d: %s" % (new_position, object_noun_text))
+                self.data['noun'].append(object_noun_text)
 
     def populate_object_list(self):
         self.ui.listWidget_object.clear()
