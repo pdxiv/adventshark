@@ -272,6 +272,7 @@ class ExampleApp(QtWidgets.QMainWindow):
             self.item_listwidget[tab_index].setCurrentRow(old_index)
         self.update_item_combobox_contents(tab_index)
         self.disable_unused_groupboxes()
+        self.disable_object_noun_button()
 
     def move_up(self):
         tab_index = self.ui.tabWidget.currentIndex()
@@ -737,6 +738,16 @@ class ExampleApp(QtWidgets.QMainWindow):
             self.ui.radioButton_precondition_subroutine.setChecked(True)
 
     # Objects
+
+    def disable_object_noun_button(self):
+        object_noun_text = self.ui.lineEdit_object_noun.text().upper()
+        if object_noun_text in self.data['noun']:
+            self.ui.pushButton_create_noun_for_object.setDisabled(True)
+        elif len(object_noun_text) == 0:
+            self.ui.pushButton_create_noun_for_object.setDisabled(True)
+        else:
+            self.ui.pushButton_create_noun_for_object.setDisabled(False)
+
     def create_object_noun(self):
         # Other than this, there should also be a function that disables the add noun button if the noun exists already, or if no object noun is specified
         object_noun_text = self.ui.lineEdit_object_noun.text().upper()
@@ -749,6 +760,7 @@ class ExampleApp(QtWidgets.QMainWindow):
                 self.ui.listWidget_noun.addItem(
                     "%d: %s" % (new_position, object_noun_text))
                 self.data['noun'].append(object_noun_text)
+        self.disable_object_noun_button()
 
     def populate_object_list(self):
         self.ui.listWidget_object.clear()
@@ -777,6 +789,7 @@ class ExampleApp(QtWidgets.QMainWindow):
             self.ui.comboBox_object_room.setCurrentIndex(
                 self.data['object'][index]['starting_location'] + 1)
             self.ui.groupBox_object.setTitle("Object " + str(index))
+        self.disable_object_noun_button()
 
     def update_object_carriable(self):
         if not self.ui.checkBox_object_carriable.isChecked():
@@ -796,6 +809,7 @@ class ExampleApp(QtWidgets.QMainWindow):
             self.ui.checkBox_object_carriable.setChecked(True)
         else:
             self.ui.checkBox_object_carriable.setEnabled(False)
+        self.disable_object_noun_button()
 
     def update_object_text(self):
         index = self.ui.listWidget_object.selectedIndexes()[0].row()
