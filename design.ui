@@ -771,26 +771,6 @@
              <layout class="QVBoxLayout" name="verticalLayout_11">
               <item>
                <layout class="QFormLayout" name="formLayout">
-                <item row="1" column="0">
-                 <widget class="QLabel" name="label_30">
-                  <property name="text">
-                   <string>Noun</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="1">
-                 <widget class="QLineEdit" name="lineEdit_object_noun"/>
-                </item>
-                <item row="3" column="0">
-                 <widget class="QLabel" name="label_31">
-                  <property name="text">
-                   <string>Start Room</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="3" column="1">
-                 <widget class="QComboBox" name="comboBox_object_room"/>
-                </item>
                 <item row="0" column="0">
                  <widget class="QLabel" name="label">
                   <property name="text">
@@ -804,6 +784,16 @@
                    <string/>
                   </property>
                  </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_30">
+                  <property name="text">
+                   <string>Noun</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="lineEdit_object_noun"/>
                 </item>
                 <item row="2" column="0">
                  <widget class="QLabel" name="label_2">
@@ -819,7 +809,27 @@
                   </property>
                  </widget>
                 </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_31">
+                  <property name="text">
+                   <string>Start Room</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QComboBox" name="comboBox_object_room"/>
+                </item>
                </layout>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton_create_noun_for_object">
+                <property name="toolTip">
+                 <string>Add object noun to noun list</string>
+                </property>
+                <property name="text">
+                 <string>Create noun for object</string>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>
