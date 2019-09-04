@@ -1042,6 +1042,8 @@ class ExampleApp(QtWidgets.QMainWindow):
                 self.item_groupbox[current_item].setEnabled(False)
             else:
                 self.item_groupbox[current_item].setEnabled(True)
+            self.item_groupbox[current_item].repaint() 
+            
 
     def set_widget_bg_color(self, w, color):
         p = w.palette()
